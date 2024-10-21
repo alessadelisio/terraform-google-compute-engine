@@ -1,0 +1,13 @@
+[
+    {
+        "name": "alessadelisio-vm",
+        "boot_disk_size": 20,
+        "machine_type": "e2-micro",
+        "image": "https://www.googleapis.com/compute/v1/projects/ubuntu-os-pro-cloud/global/images/ubuntu-pro-2204-jammy-v20240320",
+        "tags": [
+            "app-website-instance",
+            "https",
+            "http"
+        ]
+    }
+]

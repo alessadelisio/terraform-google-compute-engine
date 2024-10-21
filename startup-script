@@ -1,0 +1,14 @@
+#!/bin/bash
+curl -fsSL https://get.docker.com -o install-docker.sh
+sh install-docker.sh --dry-run
+sudo sh install-docker.sh
+sudo apt install -y net-tools
+
+REGISTRY_NAME="us-central1-docker.pkg.dev"
+PROJECT_NAME="curso-devops-402315"
+REPOSITORY_IMAGE="$REGISTRY_NAME/$PROJECT_NAME/gpincheiraa/production-application-gpincheiraa"
+
+gcloud auth configure-docker --quiet $REGISTRY_NAME
+
+sudo docker pull $REPOSITORY_IMAGE
+sudo docker run -d --name google-vm-app -p 8000:8000 $REPOSITORY_IMAGE
