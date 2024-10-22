@@ -12,8 +12,9 @@ variables {
 }
 
 provider "google" {
-  project = var.project_id
-  region  = "us-central1"
+  project     = var.project_id
+  region      = "us-central1"
+  credentials = ""
 }
 
 run "check_vms" {
