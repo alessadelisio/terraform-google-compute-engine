@@ -6,7 +6,7 @@ sudo apt install -y net-tools
 
 REGISTRY_NAME="us-central1-docker.pkg.dev"
 PROJECT_NAME="curso-devops-402315"
-REPOSITORY_IMAGE="$REGISTRY_NAME/$PROJECT_NAME/gpincheiraa/production-application-gpincheiraa"
+REPOSITORY_IMAGE="$REGISTRY_NAME/$PROJECT_NAME/rodrigoulloa/profile-site-rodrigoulloa"
 
 gcloud auth configure-docker --quiet $REGISTRY_NAME
 
